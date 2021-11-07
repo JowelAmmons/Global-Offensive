@@ -1,0 +1,29 @@
+body{
+  padding-top:80px;
+  word-wrap:break-word;
+  background-image: url('img/csgobackground.jpeg');
+}
+img{
+  height: 200px;
+}
+h1{
+  color: ivory;
+}
+h3{
+  text-align: center;
+  color: ivory;
+}
+li{
+ margin-left: 25%;
+ margin-right: 25%;
+ list-style-type: none;
+ background-color: rgba(7, 0, 0, 0.192);
+ text-align: center;
+ color: ivory
+}
+a{
+  color: ivory;
+}
+#posts{
+  margin-left: 23%;
+}

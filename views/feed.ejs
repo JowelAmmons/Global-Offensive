@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+    <title>CSGO Fan Site</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style2.css">
+    <script src="https://kit.fontawesome.com/4193a23255.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="page-header text-center">
+    <a href="/profile">Profile</a>
+    <a href="/feed">Feed</a>
+    <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+</div>
+  <div class="feed">
+
+    <h3>Posts</h3>
+      <div class="col-sm-6 post" id="posts">
+
+        <ul class="messages">
+        <% for(var i=0; i<posts.length; i++) {%>
+          <li class="message">
+            <a href="/post/<%= posts[i]._id %>">
+              <h4><%= posts[i].caption %></h4>
+              <img src="<%= posts[i].img %>" alt="">
+              <a href="/page/<%= posts[i].postedBy %>"><%= posts[i].postedBy %></a>
+            </a>
+            <span class="hide"><%= posts[i]._id %></span>
+            <span><%= posts[i].star %></span>
+            <span><i class="far fa-star"></i></span>
+          </li>
+        <% } %>
+        </ul>
+      </div>
+  </div>
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>
