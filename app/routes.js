@@ -67,7 +67,6 @@ module.exports = function(app, passport, db, multer, ObjectId) {
    //post page
    app.get('/post/:zebra', isLoggedIn, function(req, res) {
      let postId = ObjectId(req.params.zebra)
-     console.log(postId)
      db.collection('posts').find({_id: postId}).toArray((err, result) => {
        if (err) return console.log(err)
        res.render('post.ejs', {
